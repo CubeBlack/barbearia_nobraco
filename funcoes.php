@@ -17,3 +17,19 @@ function com(){
       return $pdo;
       
 }
+
+
+function sessaoAberta(){
+  if(!isset($_SESSION['login'])){
+    return false;
+  }
+  return $_SESSION['login'] == true;
+}
+
+function sessaoAbrir(){
+  $_SESSION['login'] = true;
+}
+
+function sessaoFechar(){
+  return $_SESSION['login'] = false;
+}
